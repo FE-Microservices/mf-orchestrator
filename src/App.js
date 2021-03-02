@@ -9,6 +9,7 @@ import {
 import './styles.css';
 
 const Home = React.lazy(() => import("home/App"));
+const Profile = React.lazy(() => import("profile/App"));
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
               <Home />
             </Route>
             <Route exact path="/my-profile">
-              My Profile
+              <Profile />
             </Route>
           </Switch>
         </Suspense>

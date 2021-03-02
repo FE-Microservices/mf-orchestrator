@@ -43,6 +43,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         home: "home",
+        profile: "profile",
       },
       shared: ["react-bootstrap", "react", "react-dom"],
     }),
