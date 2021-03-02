@@ -6,23 +6,31 @@ import {
   Link
 } from "react-router-dom";
 
-const Delivery = React.lazy(() => import("delivery/App"));
+import './styles.css';
+
+const Home = React.lazy(() => import("home/App"));
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
+      <div className="app">
+        <nav className="app__menu">
           <ul>
             <li>
-              <Link to="/delivery">Delivery</Link>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/my-profile">My profile</Link>
             </li>
           </ul>
         </nav>
         <Suspense fallback={null}>
           <Switch>
-            <Route path="/delivery">
-              <Delivery />
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/my-profile">
+              My Profile
             </Route>
           </Switch>
         </Suspense>

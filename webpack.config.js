@@ -42,8 +42,9 @@ module.exports = {
       library: { type: "var", name: "orchestrator" },
       filename: "remoteEntry.js",
       remotes: {
-        delivery: "delivery",
+        home: "home",
       },
+      shared: ["react-bootstrap", "react", "react-dom"],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
@@ -51,6 +52,7 @@ module.exports = {
   ],
 
   devServer: {
+    historyApiFallback: true,
     port: 3000,
   },
 };

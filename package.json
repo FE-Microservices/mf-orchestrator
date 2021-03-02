@@ -21,6 +21,6 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development --liveReload",
     "build": "webpack --mode production",
-    "serve": "serve dist -p 3003"
+    "serve": "serve dist -p 3000"
   }
 }
